@@ -1,0 +1,5 @@
+django
+requests
+django-cors-headers
+whitenoise
+psycopg2-binary
