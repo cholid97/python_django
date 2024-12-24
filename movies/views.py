@@ -14,7 +14,6 @@ def index(request):
 def list(request):
     query = request.GET.get("q")
     if query or query == "":
-        print("Query: ", query)
         movies = Movie.objects.filter(Q(name__icontains=query)).all()
 
         data = serializers.serialize("json", movies)

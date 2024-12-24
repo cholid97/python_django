@@ -68,6 +68,7 @@
 
           data.forEach((value) => {
             movie = value.fields;
+            console.log(value);
             const movieCard = `
               <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                 ${
@@ -80,7 +81,7 @@
                   <p class="text-gray-600">${movie.duration} min</p>
                   <p class="text-gray-600">Rating: ${movie.user_rating}/5</p>
                   <a href="/detail/${
-                    movie.id
+                    value.pk
                   }" class="mt-4 inline-block bg-blue-500 text-white px-4 py-2 rounded">View Details</a>
                 </div>
               </div>
